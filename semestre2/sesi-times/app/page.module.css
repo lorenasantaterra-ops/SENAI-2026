@@ -1,0 +1,351 @@
+.main {
+  min-height: 100vh;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  padding: 80px 10%;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      120deg,
+      #071b33,
+      #0d3b66
+    );
+}
+
+.hero::after {
+  content: "3B";
+  position: absolute;
+  right: 5%;
+  bottom: -100px;
+
+  font-size: 500px;
+  font-weight: 900;
+
+  color: rgba(255, 255, 255, 0.04);
+}
+
+.heroContent {
+  max-width: 700px;
+  position: relative;
+  z-index: 2;
+}
+
+.tag {
+  display: inline-block;
+
+  padding: 8px 16px;
+  margin-bottom: 20px;
+
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 30px;
+
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  margin: 0;
+
+  font-size: 90px;
+  line-height: 0.95;
+
+  font-weight: 900;
+
+  color: white;
+}
+
+.hero p {
+  max-width: 550px;
+
+  margin: 25px 0 35px;
+
+  color: #dbeafe;
+
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.button {
+  display: inline-block;
+
+  padding: 15px 28px;
+
+  border-radius: 8px;
+
+  background: white;
+  color: #0d3b66;
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  transition: 0.3s;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+
+/* SOBRE */
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+
+  padding: 100px 10%;
+
+  background: #f8fafc;
+}
+
+.subtitle {
+  color: #0d3b66;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.about h2,
+.team h2,
+.game h2 {
+  margin: 15px 0 25px;
+
+  font-size: 45px;
+
+  color: #0f172a;
+}
+
+.about p {
+  max-width: 600px;
+
+  color: #64748b;
+
+  line-height: 1.8;
+
+  font-size: 17px;
+}
+
+.aboutCard {
+  min-height: 350px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 25px;
+
+  background: #0d3b66;
+
+  color: white;
+
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.aboutCard strong {
+  font-size: 130px;
+  font-weight: 900;
+}
+
+.aboutCard span {
+  font-size: 18px;
+}
+
+
+/* TIME */
+
+.team {
+  padding: 100px 10%;
+
+  text-align: center;
+
+  background: white;
+}
+
+.teamDescription {
+  color: #64748b;
+}
+
+.players {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 25px;
+
+  margin-top: 50px;
+}
+
+.player {
+  padding: 30px 20px;
+
+  border-radius: 18px;
+
+  background: #f8fafc;
+
+  transition: 0.3s;
+}
+
+.player:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 15px 35px
+    rgba(0,0,0,0.1);
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #0d3b66;
+
+  color: white;
+
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.player h3 {
+  margin: 10px 0 5px;
+
+  color: #0f172a;
+}
+
+.player p {
+  margin: 0;
+
+  color: #64748b;
+}
+
+
+/* JOGO */
+
+.game {
+  padding: 100px 10%;
+
+  text-align: center;
+
+  background: #f1f5f9;
+}
+
+.gameCard {
+  max-width: 850px;
+
+  margin: 50px auto 0;
+
+  padding: 45px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 20px;
+
+  background: white;
+
+  box-shadow:
+    0 15px 40px
+    rgba(0,0,0,0.08);
+}
+
+.gameCard span {
+  color: #64748b;
+
+  font-size: 12px;
+  font-weight: bold;
+
+  letter-spacing: 1px;
+}
+
+.gameCard h3 {
+  color: #0f172a;
+
+  font-size: 24px;
+}
+
+.gameCard strong {
+  font-size: 30px;
+
+  color: #0d3b66;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+  .hero h1 {
+    font-size: 60px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .players {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: 550px;
+    padding: 60px 7%;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .about,
+  .team,
+  .game {
+    padding: 70px 7%;
+  }
+
+  .about h2,
+  .team h2,
+  .game h2 {
+    font-size: 35px;
+  }
+
+  .players {
+    grid-template-columns: 1fr;
+  }
+
+  .gameCard {
+    flex-direction: column;
+
+    gap: 25px;
+  }
+
+}
